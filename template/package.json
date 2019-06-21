@@ -1,0 +1,30 @@
+{
+  "name": "<%= name %>",
+  "version": "<%= version %>",
+  "description": "<%= description %>",
+  "main": "<%= entryPoint %>",
+  "repository": "<%= repository %>",
+  "author": "<%= author %>",
+  "license": "<%= license %>",
+  "private": <%= private %>,
+  "dependencies": {
+    "cors": "^2.8.5",
+    "debug": "^4.1.1",
+    "dotenv": "^8.0.0",
+    "express": "5.0.0-alpha.7",
+    "lodash": "^4.17.11",
+    "mongoose": "^5.5.15",
+    "statuses": "~1.5.0"
+  },
+  "scripts": {
+    "start": "DEBUG=* node -r dotenv/config src/index.js",
+    "test": "DOTENV_CONFIG_PATH=./test/.env DEBUG=* npx mocha --exit -r dotenv/config --file ./test/setup ./test"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "chai-http": "^4.3.0",
+    "faker": "^4.1.0",
+    "mocha": "^6.1.4",
+    "superagent-use": "^0.1.0"
+  }
+}
