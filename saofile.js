@@ -60,13 +60,8 @@ module.exports = {
         {
             type: 'move',
             patterns: {
-                '.gitignore.template': '.gitignore',
-            }
-        },
-        {
-            type: 'move',
-            patterns: {
-                '.env.template': '.env'
+                'template.gitignore': '.gitignore',
+                'template.env': '.env'
             }
         }
     ],
