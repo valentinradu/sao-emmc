@@ -5,14 +5,14 @@ module.exports = {
                 name: 'name',
                 message: 'Name:',
                 default: this.outFolder,
-                filter: val => val.toLowerCase(),
+                filter: val => val.toLowerCase().trim(),
                 store: true
             },
             {
                 name: 'group',
                 message: 'Group:',
                 default: '',
-                filter: val => val.toLowerCase(),
+                filter: val => val.toLowerCase().trim(),
                 store: true
             },
             {
@@ -60,7 +60,8 @@ module.exports = {
         {
             type: 'move',
             patterns: {
-                '.gitignore.template': '.gitignore'
+                '.gitignore.template': '.gitignore',
+                '.env.template': '.env'
             }
         }
     ],
